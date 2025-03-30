@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+dependencies {
+    implementation libs.javax.inject
+    implementation libs.kotlinx.coroutines.android
+
+    api libs.threetenabp
+    implementation(libs.kotlin.logging)
+    implementation(libs.slf4j.simple)
+
+    testImplementation libs.junit
+    testImplementation libs.junit.jupiter
+}
